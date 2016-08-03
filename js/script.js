@@ -135,8 +135,25 @@ $(function () {
     $page.addClass('visible');
   }
 
+  // Shows the Single Product Page with appropriate data.
   function renderSingleProductPage(index, data) {
-    // Shows the Single Product Page with appropriate data.
+    var $page = $('.single-product'),
+      container = $('.preview-large');
+
+    // Find the wanted product by iterating the data object and searching for the chosen index.
+    if (data.length) {
+      data.forEach(function (item) {
+        if (item.id == index) {
+          // Populate '.preview-large' with the chosen product's data.
+          container.find('h3').text(item.name);
+          container.find('img').attr('src', item.image.large);
+          container.find('p').text(item.description);
+        }
+      });
+    }
+
+    // Show the $page.
+    $page.addClass('visible');
   }
 
   function renderFilterResults(filters, products) {
