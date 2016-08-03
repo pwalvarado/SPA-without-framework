@@ -12,8 +12,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique ipsum in efficitur pharetra. Maecenas luctus ante in neque maximus, sed viverra sem posuere. Vestibulum lectus nisi, laoreet vel suscipit nec, feugiat at odio. Etiam eget tellus arcu.",
     "rating": 4,
     "image": {
-      "small": "assets/images/sony-xperia-z3.jpg",
-      "large": "assets/images/sony-xperia-z3-large.jpg"
+      "small": "images/sony-xperia-z3.jpg",
+      "large": "images/sony-xperia-z3-large.jpg"
     }
   },
   {
@@ -29,8 +29,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique ipsum in efficitur pharetra. Maecenas luctus ante in neque maximus, sed viverra sem posuere. Vestibulum lectus nisi, laoreet vel suscipit nec, feugiat at odio. Etiam eget tellus arcu.",
     "rating": 4,
     "image": {
-      "small": "assets/images/iphone6.jpg",
-      "large": "assets/images/iphone6-large.jpg"
+      "small": "images/iphone6.jpg",
+      "large": "images/iphone6-large.jpg"
     }
   },
   {
@@ -46,8 +46,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique ipsum in efficitur pharetra. Maecenas luctus ante in neque maximus, sed viverra sem posuere. Vestibulum lectus nisi, laoreet vel suscipit nec, feugiat at odio. Etiam eget tellus arcu.",
     "rating": 4,
     "image": {
-      "small": "assets/images/htc-one.jpg",
-      "large": "assets/images/htc-one-large.jpg"
+      "small": "images/htc-one.jpg",
+      "large": "images/htc-one-large.jpg"
     }
   },
   {
@@ -63,8 +63,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique ipsum in efficitur pharetra. Maecenas luctus ante in neque maximus, sed viverra sem posuere. Vestibulum lectus nisi, laoreet vel suscipit nec, feugiat at odio. Etiam eget tellus arcu.",
     "rating": 4,
     "image": {
-      "small": "assets/images/galaxy-alpha.jpg",
-      "large": "assets/images/galaxy-alpha-large.jpg"
+      "small": "images/galaxy-alpha.jpg",
+      "large": "images/galaxy-alpha-large.jpg"
     }
   },
   {
@@ -80,8 +80,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique ipsum in efficitur pharetra. Maecenas luctus ante in neque maximus, sed viverra sem posuere. Vestibulum lectus nisi, laoreet vel suscipit nec, feugiat at odio. Etiam eget tellus arcu.",
     "rating": 4,
     "image": {
-      "small": "assets/images/nokia-lumia.jpg",
-      "large": "assets/images/nokia-lumia-large.jpg"
+      "small": "images/nokia-lumia.jpg",
+      "large": "images/nokia-lumia-large.jpg"
     }
   },
   {
@@ -97,8 +97,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique ipsum in efficitur pharetra. Maecenas luctus ante in neque maximus, sed viverra sem posuere. Vestibulum lectus nisi, laoreet vel suscipit nec, feugiat at odio. Etiam eget tellus arcu.",
     "rating": 4,
     "image": {
-      "small": "assets/images/zte-nubia.jpg",
-      "large": "assets/images/zte-nubia-large.jpg"
+      "small": "images/zte-nubia.jpg",
+      "large": "images/zte-nubia-large.jpg"
     }
   },
   {
@@ -114,8 +114,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique ipsum in efficitur pharetra. Maecenas luctus ante in neque maximus, sed viverra sem posuere. Vestibulum lectus nisi, laoreet vel suscipit nec, feugiat at odio. Etiam eget tellus arcu.",
     "rating": 4,
     "image": {
-      "small": "assets/images/galaxy-s5.jpg",
-      "large": "assets/images/galaxy-s5-large.jpg"
+      "small": "images/galaxy-s5.jpg",
+      "large": "images/galaxy-s5-large.jpg"
     }
   },
   {
@@ -131,8 +131,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique ipsum in efficitur pharetra. Maecenas luctus ante in neque maximus, sed viverra sem posuere. Vestibulum lectus nisi, laoreet vel suscipit nec, feugiat at odio. Etiam eget tellus arcu.",
     "rating": 4,
     "image": {
-      "small": "assets/images/iphone5s.jpg",
-      "large": "assets/images/iphone5s-large.jpg"
+      "small": "images/iphone5s.jpg",
+      "large": "images/iphone5s-large.jpg"
     }
   }
 ]
