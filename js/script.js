@@ -86,9 +86,27 @@ $(function () {
     }
   }
 
+  // Uses Handlebars to create a list of products using the provided data.
+  // This function is called only once on page load.
   function generateAllProductsHTML(data) {
-    // Uses Handlebars to create a list of products using the provided data.
-    // This function is called only once on page load.
+    var $list = $('.all-products .products-list');
+
+    var theTemplateScript = $('#products-template').html();
+
+    //Compile the template​
+    var theTemplate = Handlebars.compile(theTemplateScript);
+    $list.append(theTemplate(data));
+
+    // Each products has a data-index attribute.
+    // On click change the url hash to open up a preview for this product only.
+    // Remember: every hashchange triggers the render function.
+    $list.find('li').on('click', function (e) {
+      e.preventDefault();
+
+      var productIndex = $(this).data('index');
+
+      window.location.hash = 'product/' + productIndex;
+    });
   }
 
   function renderProductsPage(data) {
