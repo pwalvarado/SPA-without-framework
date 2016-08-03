@@ -4,25 +4,64 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
-  <script   src="https://code.jquery.com/jquery-3.1.0.min.js"
-            integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
-            crossorigin="anonymous">
-  </script>
-  <title>Document</title>
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+
+  <title>Single Page App Without A Framework</title>
 </head>
 <body>
+
+  <header class="compact">
+		<h1><a href="#">Single Page App Without A Framework</a></h1>
+	</header>
+
   <div class="main-content">
 
   	<div class="all-products page">
 
   		<h3>Our products</h3>
 
-  		<div class="filters">
-  			<form>
-  				Checkboxes here
-  			</form>
-  		</div>
+      <div class="filters">
+				<form>
+
+					<div class="filter-criteria">
+						<span>Manufacturer</span>
+						<label><input type="checkbox" name="manufacturer" value="apple">Apple</label>
+						<label><input type="checkbox" name="manufacturer" value="samsung">Samsung</label>
+						<label><input type="checkbox" name="manufacturer" value="htc">HTC</label>
+						<label><input type="checkbox" name="manufacturer" value="nokia">Nokia</label>
+						<label><input type="checkbox" name="manufacturer" value="zte">ZTE</label>
+						<label><input type="checkbox" name="manufacturer" value="sony">Sony</label>
+					</div>
+
+					<div class="filter-criteria">
+						<span>Screen Size</span>
+						<label><input type="checkbox" value="16" name="storage">16 GB</label>
+						<label><input type="checkbox" value="32" name="storage">32 GB</label>
+					</div>
+
+					<div class="filter-criteria">
+						<span>OS</span>
+						<label><input type="checkbox" value="android" name="os">Android</label>
+						<label><input type="checkbox" value="ios" name="os">iOS</label>
+						<label><input type="checkbox" value="windows" name="os">Windows</label>
+					</div>
+
+					<div class="filter-criteria">
+						<span>Camera</span>
+						<label><input type="checkbox" value="5" name="camera">5 Mpx</label>
+						<label><input type="checkbox" value="8" name="camera">8 Mpx</label>
+						<label><input type="checkbox" value="12" name="camera">12 Mpx</label>
+						<label><input type="checkbox" value="15" name="camera">15 Mpx</label>
+					</div>
+
+					<button>Clear filters</button>
+
+				</form>
+
+			</div>
+
 
       <ul class="products-list">
         <script id="products-template" type="x-handlebars-template">​
@@ -66,5 +105,12 @@
   	</div>
 
   </div>
+
+  <script   src="https://code.jquery.com/jquery-3.1.0.min.js"
+              integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+              crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+
+	<script src="js/script.js"></script>
 </body>
 </html>
