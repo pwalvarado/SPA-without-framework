@@ -1,15 +1,97 @@
 $(function () {
 
-  checkboxes.click(function () {
-    // The checkboxes in our app serve the purpose of filters.
-    // Here on every click we add or remove filtering criteria from a filters object.
+  // Globals variables
 
-    // Then we call this function which writes the filtering criteria in the url hash.
-    createQueryHash(filters);
+  // 	An array containing objects with information about the products.
+  var products = [],
+
+   // Our filters object will contain an array of values for each filter
+
+   // Example:
+   // filters = {
+   // 		"manufacturer" = ["Apple","Sony"],
+   //		"storage" = [16]
+   //	}
+   filters = {};
+
+  var checkboxes = $('.all-products input[type=checkbox]');
+
+  // The checkboxes in our app serve the purpose of filters.
+  // Here on every click we add or remove filtering criteria from a filters object.
+
+  // Then we call this function which writes the filtering criteria in the url hash.
+  //createQueryHash(filters);
+  checkboxes.click(function () {
+
+    var that = $(this),
+     specName = that.attr('name');
+
+    // When a checkbox is checked we need to write that in the filters object;
+    if (that.is(':checked')) {
+
+      // If the filter for this specification isn't created yet - do it.
+      if (!(filters[specName] && filters[specName].length)) {
+        filters[specName] = [];
+      }
+
+      //	Push values into the chosen filter array
+      filters[specName].push(that.val());
+
+      // Change the url hash;
+      createQueryHash(filters);
+    }
+
+    // When a checkbox is unchecked we need to remove its value from the filters object.
+    if (!that.is(':checked')) {
+      if (filters[specName] &&
+        filters[specName].length &&
+        (filters[specName].indexOf(that.val()) != -1)) {
+
+        // Find the checkbox value in the corresponding array inside the filters object.
+        var index = filters[specName].indexOf(that.val());
+
+        // Remove it.
+        filters[specName].splice(index, 1);
+
+        // If it was the last remaining value for this specification,
+        // delete the whole array.
+        if (!filters[specName].length) {
+          delete filters[specName];
+        }
+      }
+
+      // Change the url hash;
+      createQueryHash(filters);
+    }
+  });
+
+  // When the "Clear all filters" button is pressed change the hash to '#' (go to the home page)
+  $('.filters button').click(function (e) {
+    e.preventDefault();
+    window.location.hash = '#';
+  });
+
+  // Single product page buttons
+  var $singleProductPage = $('.single-product');
+
+  $singleProductPage.on('click', function (e) {
+
+    if ($singleProductPage.hasClass('visible')) {
+      var $clicked = $(e.target);
+
+      // If the close button or the background are $clicked go to the previous page.
+      if ($clicked.hasClass('close') || $clicked.hasClass('overlay')) {
+        // Change the url hash with the last used filters.
+        createQueryHash(filters);
+      }
+    }
   });
 
   $.getJSON('products.json', function (data) {
     // Get data about our products from products.json.
+
+    // Write the data into our global variable.
+    products = data;
 
     // Call a function that will turn that data into HTML.
     generateAllProductsHTML(data);
