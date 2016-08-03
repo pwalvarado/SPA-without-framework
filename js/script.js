@@ -109,8 +109,30 @@ $(function () {
     });
   }
 
+  // Hides and shows products in the All Products Page depending on the data it recieves.
   function renderProductsPage(data) {
-    // Hides and shows products in the All Products Page depending on the data it recieves.
+    var $page = $('.all-products'),
+      allProducts = $('.all-products .products-list > li');
+
+    // Hide all the products in the products list.
+    allProducts.addClass('hidden');
+
+    // Iterate over all of the products.
+    // If their ID is somewhere in the data object remove the hidden class to reveal them.
+    allProducts.each(function () {
+
+      var that = $(this);
+
+      data.forEach(function (item) {
+        if (that.data('index') == item.id) {
+          that.removeClass('hidden');
+        }
+      });
+    });
+
+    // Show the $page itself.
+    // (the render function hides all $pages so we need to show the one we want).
+    $page.addClass('visible');
   }
 
   function renderSingleProductPage(index, data) {
